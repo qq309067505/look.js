@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/look-es5.js"></script>
+    <!-- <link rel="stylesheet" href="iconfont/iconfont.css"> -->
+    <link rel="stylesheet" href="css/look.css">
+    <title>Document</title>
+    <script>
+        var a1 = function () {
+            look.alert({
+                skin: "0",
+                content: "hello~ my name is...",
+                // height:500,
+                ok: a2
+            });
+        }
+
+        var a2 = function () {
+            look.msg("looker~").onClose = a3;
+            look.iframe({
+                title: "百度",
+                src: "http://m.baidu.com/",
+                width: 375,
+                height: 640,
+                showScreen: true,
+                direction: "rightBottom",
+                buttons: [{
+                    text: "关闭",
+                    type: "red"
+                }]
+            });
+        }
+
+        var a3 = function () {
+            look.prompt({
+                content: "your name ?",
+                yes: a4
+            });
+        }
+
+        var a4 = function () {
+            look.msg("nice to meet you~" + this.value).onClose = a5;
+            look.iframe({
+                title: "优酷",
+                src: "http://m.youku.com/",
+                width: 375,
+                height: 640,
+                showScreen: true,
+                direction: "leftBottom",
+                buttons: [{
+                    text: "关闭",
+                    type: "red"
+                }]
+            });
+        }
+
+        var a5 = function () {
+            look.confirm({
+                skin: "0",
+                content: "do you love me?",
+                minWidth: "auto",
+                buttons: [{
+                    text: "yes",
+                    type: "green",
+                    close: true,
+                    click: function () {
+                        look.msg("l love you too");
+                        look.iframe({
+                            title: "叮咚学车",
+                            src: "http://m.dingdongxueche.com/",
+                            width: 375,
+                            height: 640,
+                            showScreen: true,
+                            direction: "top",
+                            buttons: [{
+                                text: "关闭",
+                                type: "red"
+                            }]
+                        });
+                    }
+                },
+                {
+                    text: "no",
+                    type: "red",
+                    close: true,
+                    click: function () {
+                        look.msg("T.T");
+                    }
+                }]
+            })
+        }
+
+        $(function () {
+
+            
+            
+            look.wrap({
+                dom: "#a",
+                skin:"0"
+            });
+
+
+        })
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <span>1</span>
+    <div style="background:blue; width:200; height:200px;">
+        <div id="a" style="width:100px; height:250px; background:red"></div>
+    </div>
+    <span>2</span>
+</body>
+
+</html>

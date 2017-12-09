@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot') !important;
+    /* IE9*/
+    src: url('iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome, firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.look-iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.look-container.hide .look-box {
+    transform: scale(.3);
+    opacity: 0;
+    /* ie7-8 */
+    display: none\9;
+}
+
+.look-container.hide .look-screen {
+    opacity: 0;
+    /* ie7-8 */
+    display: none\9;
+}
+
+.look-container {
+    box-sizing: border-box;
+}
+
+.look-container .look-box {
+    position: fixed;
+    z-index: 99999;
+    margin: 0 auto;
+    /* box-sizing: border-box; */
+    border: 1px solid rgb(230, 230, 230);
+    transition: transform .3s cubic-bezier(0.38, 0.63, 0.14, 1.29), opacity .3s;
+    *width: 155px;
+}
+
+.look-container .look-box.wrap{
+    border: 0;
+}
+
+
+.look-container .look-screen {
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    transition: .3s;
+    /* ie7-8 */
+    background: rgb(0, 0, 0)\9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50)\9;
+}
+
+.look-container .look-box .mini-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    right: -10px;
+    top: -10px;
+    background: rgb(66, 66, 66);
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.look-container .look-box .mini-close:hover{
+    background:rgb(0, 146, 134);
+}
+
+.look-container .look-box .mini-close i.look-iconfont {
+    font-size: 12px !important;
+    position: relative;
+    top: -1px;
+    right: 0px;
+}
+
+.look-container .look-box .look-head {
+    height: 36px;
+    line-height: 36px;
+    background: rgb(250, 250, 250);
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: move;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.look-container .look-box .look-head .look-title {
+    float: left;
+    margin-left: 10px;
+    color: rgb(161, 161, 161);
+}
+
+.look-container .look-box .look-head .look-title-btns {
+    float: right;
+    overflow: hidden;
+}
+
+.look-container .look-box .look-head .look-title-btns i {
+    font-size: 14px;
+}
+
+.look-container .look-box .look-head .look-title-btns .title-btn {
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    width: 36px;
+    text-align: center;
+}
+
+.look-container .look-box .look-head .look-title-btns .title-btn:hover {
+    background: rgba(0, 0, 0, .05);
+    /* ie7-8 */
+    background: rgb(0, 0, 0)\9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=5)\9;
+}
+
+.look-container .look-box .look-body {
+    /* height: 200px; */
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #fff;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    overflow: auto;
+}
+
+.look-container .look-box.skin-0 .look-body {
+    color: #fff;
+    width: auto;
+    min-width: auto;
+    text-align: center;
+}
+
+.look-container .look-box.skin-0 .look-floor,
+.look-container .look-box.skin-0 .look-head,
+.look-container .look-box.skin-0 .look-body {
+    background: rgba(0, 0, 0, .5);
+    /* ie7-8 */
+    background: rgb(0, 0, 0)\9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70)\9;
+}
+
+.look-container .look-box.skin-0 .look-head {
+    border: 0;
+}
+
+.look-container .look-box.skin-0 .look-head .title-btn,
+.look-container .look-box.skin-0 .look-head .look-title {
+    color: #fff;
+}
+
+.look-container .look-box.skin-0 {
+    border: 0;
+}
+
+.look-container .look-box.wrap .look-body {
+    padding: 0;
+}
+
+.look-container .look-box.iframe .look-body {
+    padding: 0;
+    /* height: 100%; */
+}
+
+.look-container .look-box.prompt .look-input {
+    width: 100%;
+    line-height: 28px;
+    height: 28px;
+    border: 1px solid rgb(230, 230, 230);
+    outline: none;
+    margin-top: 10px;
+    padding: 0 10px;
+    *padding: 0;
+    box-sizing: border-box;
+    /* asd */
+}
+
+.look-container .look-box.skin-0 .look-input {
+    background-color: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .15);
+    color: #fff;
+    /* ie7-8 */
+    background: rgb(255, 255, 255)\9;
+    border-color: rgb(255, 255, 255)\9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=15)\9;
+}
+
+.look-container .look-box .look-floor {
+    background: #fff;
+    overflow: hidden;
+}
+
+.look-container .look-box .look-floor .look-floor-btns {
+    float: right;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.look-container .look-box.skin-0 .look-floor .look-floor-btns {
+    float: none;
+    float: right \9;
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn:first-child {
+    margin-left: 0;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn {
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    min-width: 40px;
+    text-align: center;
+    background: rgb(245, 245, 245);
+    border: 1px solid rgb(230, 230, 230);
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn:hover {
+    opacity: .8;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn:active {
+    opacity: .5;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn.red {
+    background: rgb(255, 60, 60);
+    border-color: rgb(255, 60, 60);
+    color: #fff;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn.green {
+    background: rgb(0, 187, 109);
+    border-color: rgb(0, 187, 109);
+    color: #fff;
+}
+
+.look-container .look-box .look-floor .look-floor-btns .floor-btn.blue {
+    background: rgb(30, 159, 255);
+    border-color: rgb(30, 159, 255);
+    color: #fff;
+}
